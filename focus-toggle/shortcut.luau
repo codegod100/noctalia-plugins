@@ -2,10 +2,10 @@ local enabled = noctalia.state.get("enabled") == true
 
 local function labelForState()
   if enabled then
-    return shortcut.getConfig("on_label") or "Focus on"
+    return getConfig("on_label") or "Focus on"
   end
 
-  return shortcut.getConfig("off_label") or "Focus off"
+  return getConfig("off_label") or "Focus off"
 end
 
 local function render()
@@ -27,7 +27,7 @@ function onClick()
   noctalia.state.set("enabled", enabled)
   render()
 
-  if shortcut.getConfig("notify") ~= false then
+  if getConfig("notify") ~= false then
     local body = enabled and "Focus mode enabled" or "Focus mode disabled"
     noctalia.notify("Focus Toggle", body)
   end
