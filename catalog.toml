@@ -1,0 +1,7 @@
+[[plugin]]
+id = "codegod100/focus-toggle"
+name = "Focus Toggle"
+version = "0.1.0"
+author = "codegod100"
+min_noctalia = "5.0.0"
+tags = ["shortcut", "demo"]

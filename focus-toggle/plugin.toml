@@ -1,0 +1,31 @@
+id = "codegod100/focus-toggle"
+name = "Focus Toggle"
+version = "0.1.0"
+min_noctalia = "5.0.0"
+author = "codegod100"
+icon = "moon-stars"
+description = "A control-center shortcut that toggles a per-plugin focus mode flag."
+tags = ["shortcut", "demo"]
+
+[[shortcut]]
+id = "focus-toggle"
+entry = "shortcut.luau"
+
+  [[shortcut.setting]]
+  key = "on_label"
+  type = "string"
+  label = "Enabled label"
+  default = "Focus on"
+
+  [[shortcut.setting]]
+  key = "off_label"
+  type = "string"
+  label = "Disabled label"
+  default = "Focus off"
+
+  [[shortcut.setting]]
+  key = "notify"
+  type = "bool"
+  label = "Show notifications"
+  default = true
+  advanced = true
